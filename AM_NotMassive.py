@@ -422,7 +422,8 @@ def makeCrowd(group):
         
         # make channels, channel strings are used later in node creation
         crowdRandomColorStr = 'crowdRandomColor'
-        nuke.Layer( crowdRandomColorStr , ['red', 'green', 'blue'] )
+        nuke.Layer( crowdRandomColorStr , ['{0}.red.red', '{0}.green.green', '{0}.blue.blue'] )
+        #nuke.Layer( crowdRandomColorStr , ['red', 'green', 'blue'] )
 
         crowdIDStr = 'crowdID'
         nuke.Layer( crowdIDStr, ['id','sprite'] )
